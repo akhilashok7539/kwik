@@ -1,0 +1,30 @@
+.btn-warning {
+    color: white !important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+    padding: 15px;
+    border-radius: 20px;
+    background-image: linear-gradient(50deg, rgb(161, 161, 196), rgb(57, 57, 71));
+}
+
+.col-sm-4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    text-transform: uppercase !important;
+}
+
+.submits-btn {
+    /* border-radius: 50px; */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 303px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}

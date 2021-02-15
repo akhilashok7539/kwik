@@ -1,0 +1,10 @@
+.logo span {
+    color: #fff700 !important;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.admin {
+    color: yellow !important;
+}

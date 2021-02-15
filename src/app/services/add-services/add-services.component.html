@@ -1,0 +1,57 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="page-wrapper">
+
+
+
+
+    <div class="content">
+
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h4 class="page-title"> Add Services</h4>
+
+            </div>
+        </div>
+        <form [formGroup]="addserviceFormRegistration">
+            <div class="row">
+
+
+
+                <div class="col-sm-4">
+                    <label for=""> Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Name" [(ngModel)]="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" formControlName="name">
+
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <label for="">Packages</label>
+                    <input type="text" class="form-control" placeholder="Enter the Packages" [(ngModel)]="packages" [ngClass]="{ 'is-invalid': submitted && f.packages.errors }" formControlName="packages">
+
+                    <div *ngIf="submitted && f.packages.errors" class="invalid-feedback">
+                        <div *ngIf="f.packages.errors.required">Description is required</div>
+                        <div *ngIf="f.packages.errors.maxlength">Maximum 50 characters are allowed</div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-12">
+                    <!-- <button class="btn btn-warning" (click)="submit()">SUBMIT</button> -->
+                    <button class="btn btn-warning" (click)="submit()" [disabled]="isLoading"><i class="fa"
+                            [ngClass]="{' fa-spinner fa-spin': isLoading, 'fa-check': !isLoading}"></i>
+                        {{button}}</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

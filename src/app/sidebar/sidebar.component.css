@@ -1,0 +1,28 @@
+.sidebar .sidebar-menu>ul>li>a span {
+    font-size: 14px;
+}
+
+.sidebar {
+    overflow: auto !important;
+}
+
+hr {
+    width: 60%;
+    background: #8d8d8d !important;
+}
+
+.fa-wrench {
+    color: red;
+}
+
+.fa-building {
+    color: rgb(247, 7, 127);
+}
+
+.fa-users {
+    color: blue;
+}
+
+.fa-ticket {
+    color: orange;
+}

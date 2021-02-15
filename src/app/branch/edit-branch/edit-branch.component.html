@@ -1,0 +1,212 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="page-wrapper">
+
+
+
+
+    <div class="content">
+
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h4 class="page-title"> Add Branches</h4>
+
+            </div>
+        </div>
+        <form [formGroup]="editbranchFormRegistration">
+            <h4>Branch Details</h4>
+            <div class="row">
+
+
+                <div class="col-sm-6">
+                    <label for="">District</label>
+
+                    <select name="" id="" class="form-control" [(ngModel)]="district" [ngClass]="{ 'is-invalid': submitted && f.district.errors }" formControlName="district">
+                        <option value="" disabled selected>Choose a option </option>
+                        <option value="1">Thiruvananthapuram</option>
+                        <option value="2">Kollam </option>
+                        <option value="3">Alappuzha </option>
+                        <option value="4">Pathanamthitta </option>
+                        <option value="5">Kottayam </option>
+                        <option value="6">Idukki </option>
+                        <option value="7">Ernakulam </option>
+                        <option value="8">Thrissur </option>
+                        <option value="9">Palakkad </option>
+                        <option value="10">Malappuram </option>
+                        <option value="11">Kozhikode </option>
+                        <option value="12">Wayanad </option>
+                        <option value="13">Kannur </option>
+                        <option value="14">Kasaragod </option>
+
+
+                    </select>
+                    <div *ngIf="submitted && f.district.errors" class="invalid-feedback">
+                        <div *ngIf="f.district.errors.required">District Name is required</div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Branch Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Branch Name" [(ngModel)]="bname" [ngClass]="{ 'is-invalid': submitted && f.bname.errors }" formControlName="bname">
+
+                    <div *ngIf="submitted && f.bname.errors" class="invalid-feedback">
+                        <div *ngIf="f.bname.errors.required">Branch Name is required</div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control" placeholder="Enter the Username" [(ngModel)]="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username">
+
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Password</label>
+                    <input type="text" class="form-control" placeholder="Enter the Password" [(ngModel)]="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password">
+
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+
+
+                    </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 10px;">
+                    <h4>Contact Person Details</h4>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Contact Name</label>
+                    <input type="text" class="form-control" placeholder="Enter the Contact Name" [(ngModel)]="cname" [ngClass]="{ 'is-invalid': submitted && f.cname.errors }" formControlName="cname">
+
+                    <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                        <div *ngIf="f.cname.errors.required">Contact Name is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Phone Number</label>
+                    <input type="text" class="form-control" placeholder="Enter the Phone Number" [(ngModel)]="phn" [ngClass]="{ 'is-invalid': submitted && f.phn.errors }" formControlName="phn">
+
+                    <div *ngIf="submitted && f.phn.errors" class="invalid-feedback">
+                        <div *ngIf="f.phn.errors.required">Phone Number is required</div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <label for="">Alternate Phone Number</label>
+                    <input type="text" class="form-control" placeholder="Enter the Alternate Phone Number" [(ngModel)]="aphn" [ngClass]="{ 'is-invalid': submitted && f.aphn.errors }" formControlName="aphn">
+
+                    <div *ngIf="submitted && f.aphn.errors" class="invalid-feedback">
+                        <div *ngIf="f.aphn.errors.required">Alternate Phone Number is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" placeholder="Enter the Email" [(ngModel)]="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email">
+
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Date</label>
+                    <input type="text" class="form-control" placeholder="Enter the Date" [(ngModel)]="date" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" formControlName="date">
+
+                    <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                        <div *ngIf="f.date.errors.required">Date is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Selected ID Proof</label>
+                    <input type="text" class="form-control" placeholder="Enter the Selected ID Proof" [(ngModel)]="proof" [ngClass]="{ 'is-invalid': submitted && f.proof.errors }" formControlName="proof">
+
+                    <div *ngIf="submitted && f.proof.errors" class="invalid-feedback">
+                        <div *ngIf="f.proof.errors.required">Selected ID Proof is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">ID No</label>
+                    <input type="text" class="form-control" placeholder="Enter the ID No" [(ngModel)]="id" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" formControlName="id">
+
+                    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                        <div *ngIf="f.id.errors.required">ID No is required</div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Address </label>
+                    <input type="text" class="form-control" placeholder="Enter the Address" [(ngModel)]="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" formControlName="address">
+
+                    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                        <div *ngIf="f.address.errors.required">Address is required</div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-12" style="margin-top: 10px;">
+                    <h4>Services Offered</h4>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="">Services</label>
+
+                    <select name="" id="" class="form-control" [(ngModel)]="services" [ngClass]="{ 'is-invalid': submitted && f.services.errors }" formControlName="services">
+                        <option value="" disabled selected>Choose a option </option>
+                        <option value="1">Testing</option>
+                        <option value="2">House Cleaning</option>
+                        <option value="1">Water Tank Cleaning</option>
+                        <option value="1">Car Washing</option>
+
+                    </select>
+                    <div *ngIf="submitted && f.services.errors" class="invalid-feedback">
+                        <div *ngIf="f.services.errors.required">Services is required</div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <!-- <button class="btn btn-warning" (click)="submit()">SUBMIT</button> -->
+                    <button class="btn btn-warning" (click)="submit()" [disabled]="isLoading"><i class="fa"
+                            [ngClass]="{' fa-spinner fa-spin': isLoading, 'fa-check': !isLoading}"></i>
+                        {{button}}</button>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+</div>
